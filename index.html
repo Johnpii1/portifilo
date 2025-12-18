@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portifilo</title>
+</head>
+<!--LINK FOR CSS-->
+<link rel="stylesheet" href="stlye.css">
+
+<!--CDN ICON LINK-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+<!--LINK FOR TAILWIND-->
+<script src="https://cdn.tailwindcss.com"></script>
+<body class="bg-black">
+    
+    <!--MAIN DIV-->
+<div class="flex justify-between items-center  m-5">
+
+    <!--Second div-->
+<div class="text-orange-600 font-bold">
+LOGO
+</div>
+
+<!--HEADER TEXT FOR DESKTOP-->
+<div  class="hidden  md:font-semibold  md:flex md:flex-row md:gap-[30px] md:text-white">
+<a href="#" class=" md:hover:text-orange-600">Home</a>
+<a href="#" class=" md:hover:text-orange-600" >Services</a>
+<a href="#" class=" md:hover:text-orange-600">About me</a>
+<a href="#" class=" md:hover:text-orange-600">Contact me</a>
+</div>
+
+<!--HEADER BUTTON-->
+<div class="hidden  md:flex md:flex-row">
+<button class="text-white bg-orange-600 px-4   rounded flex items-center justify-center py-1  active:bg-orange-900 md:w-[110px]"><a href="#">Hire me</a></button>
+</div>
+
+
+<!--MENU BAR BUTTON-->
+<div id="btn" class="text-white text-xl font-bold cursor-pointer md:hidden">
+<i class="bi bi-three-dots-vertical"></i>
+</div>
+
+<!--HEADER TEXT FOR MOBLIE-->
+<div id="menu" class="menus hidden absolute top-[2.95rem] bg-white h-80 w-[200px] right-0 md:hidden">
+    <div class="flex flex-col gap-[16px] px-2">
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">About me</a>
+<a href="#">Contact me</a>
+
+<!--HEADER BUTTON FOR HIRE-->
+<button class="text-white bg-orange-600 px-4  flex items-center justify-center py-1  active:bg-orange-900 rounded-md"><a href="#">Hire me</a></button>
+
+</div>
+</div>
+
+</div>
+
+
+
+</body>
+<script src="script.js"></script>
+</html>
