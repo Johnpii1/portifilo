@@ -44,16 +44,15 @@ LOGO
 </div>
 
 <!--HEADER TEXT FOR MOBLIE-->
-<div id="menu" class="menus hidden absolute top-[2.95rem] bg-white h-[200px] w-[200px] right-0 shadow-[0_6px_20px_rgba(255,255,255,0.6)] rounded-sm md:hidden">
-    <div class="flex flex-col gap-[16px] px-2">
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">About me</a>
-<a href="#">Contact me</a>
+<div id="menu" class="menus hidden absolute top-[2.95rem] bg-white h-[200px] w-[200px] right-0 shadow-[0_6px_20px_rgba(255,255,255,0.6)] rounded-sm z-10 md:hidden">
+    <div class="flex flex-col gap-[16px] px-2 font-semibold">
+<a href="./index.html"> <i class="bi bi-house-fill"></i> &nbsp; Home</a>
+<a href="#"><i class="bi bi-wrench"></i> &nbsp; Services</a>
+<a href="#"><i class="bi bi-file-person"></i> &nbsp; About me</a>
+<a href="#"><i class="bi bi-person-lines-fill"></i> &nbsp; Contact me</a>
 
 <!--HEADER BUTTON FOR HIRE-->
 <button class="text-white bg-orange-600 px-4  flex items-center justify-center py-1  active:bg-orange-900 rounded-md"><a href="#">Hire me</a></button>
-
 </div>
 </div>
 </div>
@@ -61,11 +60,40 @@ LOGO
 
 <!--MAIN SECTION-->
 <!--MAIN DIV-->
-<div class="flex justify-between gap-4 px-2">
+<div class=" gap-4 m-5 h-[60vh] flex items-center justify-around">
+
+    <!--FIRST DIV TEXT-->
+    <div>
+<h3 class="text-white font-semibold md:text-md">Hi I am</h3>
+<h2 class="text-white font-bold md:text-xl">Okoli Johnpaul .S.</h2>
+<h1 class="text-orange-600 text-2xl  font-bold mt-4 drop-shadow-[0_6px_15px_rgba(255,165,0,0.8)] md:text-4xl">Web Developer (Front-end)</h1>
+    
+<!--ICON AND LINK-->
+<div class="flex flex-row gap-3 text-white mt-[3.2rem]">
+    <a href="#"><i class="bi bi-instagram md:hover:text-orange-300 md:active:text-orange-900"></i></a>
+    <a href="#"><i class="bi bi-linkedin md:hover:text-orange-300 md:active:text-orange-900"></i></a>
+    <a href="#"><i class="bi bi-whatsapp md:hover:text-orange-300 md:active:text-orange-900"></i></a>
+    <a href="#"><i class="bi bi-facebook md:hover:text-orange-300 md:active:text-orange-900"></i></a>
+</div>
+</div>
+
+
+    <!--PICTURE FOR DESKTOP-->
+    <div class="hidden md:flex">
+    <div class="w-[300px] h-[300px] bg-gray-900 rounded-full">
+
+    </div>
+</div>
 
 
 </div>
  
+ <!--PICTURE FOR MOBILE-->
+    <div class="block md:hidden absolute right-0 top-[17rem]">
+    <div class="w-[300px] h-[300px] bg-gray-900 rounded-full">
+
+    </div>
+</div>
 
 </body>
 <script src="script.js"></script>
