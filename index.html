@@ -51,13 +51,20 @@
 
         <!--MENU BAR BUTTON-->
         <div id="btn" class="text-white text-2xl font-bold cursor-pointer border-[0.90px] border-white rounded w-8 h-7 flex items-center md:hidden">
-            <i class="bi bi-list-ul"></i>
+            <i class="bi bi-list-ul font-bold"></i>
         </div>
 
         <!--HEADER TEXT FOR MOBLIE-->
         <div
             class="menus overflow-y-auto hidden absolute top-[3.4rem] bg-white h-[200px] w-[200px] right-0 shadow-[0_6px_20px_rgba(255,255,255,0.6)] rounded-sm z-10 md:hidden">
-            <div class="flex flex-col gap-[16px] px-2 font-semibold">
+            <!--CLOSE BUTTON-->
+            <div class="py-2 flex justify-center">
+            <div class="flex items-center border-[1.5px] border-red-500 w-fit h-[25px] rounded-md absolute right-0 cursor-pointer">
+                <i class="bi bi-x font-bold text-lg"></i>
+            </div>
+            </div>
+            
+            <div class="flex flex-col gap-[16px] px-2 py-4 font-semibold">
                 <a href="./index.html"> <i class="bi bi-house-fill"></i> &nbsp; Home</a>
                 <a href="./service.html"><i class="bi bi-wrench"></i> &nbsp; Services</a>
                 <a href="#"><i class="bi bi-file-person"></i> &nbsp; About me</a>
