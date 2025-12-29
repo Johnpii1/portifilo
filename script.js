@@ -1,4 +1,5 @@
 const menuBtn = document.getElementById("btn");
+const closeBtn = document.getElementById("closebtn")
 const menu = document.querySelector(".menus");
 
 if (menuBtn && menu) {
@@ -7,6 +8,9 @@ if (menuBtn && menu) {
   });
 }
 
+closeBtn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
 
 
 //dark mood and light mood 
@@ -21,6 +25,10 @@ if (menuBtn && menu) {
 // darkBtn.addEventListener("click", () => {
 //   html.classList.add("dark");
 // });
+
+
+
+
 
 
 
