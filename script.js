@@ -14,18 +14,12 @@ closeBtn.addEventListener("click", () => {
 
 
 //dark mood and light mood 
-// const html = document.documentElement;
-// const lightBtn = document.getElementById("lightBtn");
-// const darkBtn = document.getElementById("darkBtn");
+  const btn = document.getElementById("toggle");
+  const html = document.documentElement;
 
-// lightBtn.addEventListener("click", () => {
-//   html.classList.remove("dark");
-// });
-
-// darkBtn.addEventListener("click", () => {
-//   html.classList.add("dark");
-// });
-
+  btn.addEventListener("click", () => {
+    html.classList.toggle("dark");
+  });
 
 
 
