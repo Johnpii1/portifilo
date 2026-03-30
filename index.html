@@ -1,193 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Johnpaul Portfolio</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Johnpaul Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Smooth Scroll -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .animated-bg {
+      background: linear-gradient(-45deg, #3b82f6, #9333ea, #06b6d4, #6366f1);
+      background-size: 400% 400%;
+      animation: gradientMove 10s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+
+      100% {
+        background-position: 0% 50%
+      }
+    }
+  </style>
 
 </head>
 
 <body class="bg-black text-white font-sans">
 
-<!-- NAVBAR -->
-<header class="bg-black border-b border-gray-800 fixed w-full z-50">
-<div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+  <!-- NAVBAR -->
+  <header class="bg-black border-b border-gray-800 fixed w-full z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
 
-<h1 class="font-bold text-xl">Johnpaul</h1>
+      <h1 class="font-bold text-xl">Johnpaul</h1>
 
-<button id="menuBtn" class="md:hidden text-2xl">
-☰
-</button>
+      <button id="menuBtn" class="md:hidden text-2xl">
+        ☰
+      </button>
 
-<nav class="hidden md:flex gap-6 font-medium">
-<a href="#about" class="hover:text-blue-400">About</a>
-<a href="#skills" class="hover:text-blue-400">Skills</a>
-<a href="#projects" class="hover:text-blue-400">Projects</a>
-<a href="#contact" class="hover:text-blue-400">Contact</a>
-</nav>
+      <nav class="hidden md:flex gap-6 font-medium">
+        <a href="#about" class="hover:text-blue-400">About</a>
+        <a href="#skills" class="hover:text-blue-400">Skills</a>
+        <a href="#projects" class="hover:text-blue-400">Projects</a>
+        <a href="#contact" class="hover:text-blue-400">Contact</a>
+      </nav>
 
-</div>
+    </div>
 
-<!-- MOBILE MENU -->
-<div id="mobileMenu" class="hidden md:hidden bg-black border-t border-gray-800">
-<a href="#about" class="block p-4 border-b border-gray-800">About</a>
-<a href="#skills" class="block p-4 border-b border-gray-800">Skills</a>
-<a href="#projects" class="block p-4 border-b border-gray-800">Projects</a>
-<a href="#contact" class="block p-4">Contact</a>
-</div>
-</header>
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="hidden md:hidden bg-black border-t border-gray-800">
+      <a href="#about" class="block p-4 border-b border-gray-800">About</a>
+      <a href="#skills" class="block p-4 border-b border-gray-800">Skills</a>
+      <a href="#projects" class="block p-4 border-b border-gray-800">Projects</a>
+      <a href="#contact" class="block p-4">Contact</a>
+    </div>
+  </header>
 
-<!-- HERO -->
-<section class="pt-32 pb-20 bg-gradient-to-r from-blue-600 to-purple-600">
+  <!-- HERO -->
+  <section class="pt-32 pb-20 animated-bg">
 
-<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6">
 
-<div>
-<h2 class="text-4xl md:text-5xl font-bold mb-6">
-Hi, I'm Johnpaul 👋
-</h2>
+      <div data-aos="fade-right">
 
-<p class="text-lg mb-6">
-Frontend developer from Nigeria focused on building responsive
-and modern websites using HTML, Tailwind CSS and JavaScript.
-</p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          Hi, I'm Johnpaul 👋
+        </h2>
 
-<a href="https://wa.me/2347049713444"
-class="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">
-Chat on WhatsApp
-</a>
+        <p class="text-lg mb-6">
+          <span id="typing"></span>
+        </p>
 
-</div>
+        <a href="https://wa.me/2347049713444"
+          class="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">
+          Chat on WhatsApp
+        </a>
 
-<!-- IMAGE -->
-<div class="flex justify-center">
+        <!-- SOCIAL -->
+        <div class="flex gap-4 mt-6 text-2xl">
 
-<div class="w-72 h-72 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center border border-white/30">
+          <a href="#" class="hover:text-blue-400">
+            <i class="fab fa-github"></i>
+          </a>
 
-<span>Add your image</span>
+          <a href="#" class="hover:text-blue-400">
+            <i class="fab fa-linkedin"></i>
+          </a>
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-</div>
-</section>
+      <!-- IMAGE -->
+      <div class="flex justify-center" data-aos="zoom-in">
 
-<!-- ABOUT -->
-<section id="about" class="py-20 px-6">
+        <div
+          class="w-72 h-72 bg-white/20 backdrop-blur rounded-full flex items-center justify-center border border-white/30">
 
-<div class="max-w-4xl mx-auto text-center">
+          <img class="rounded-full object-contain" src="image/IMG_20260114_202638.jpg" alt="">
 
-<h3 class="text-3xl font-bold mb-6">About Me</h3>
+        </div>
 
-<p class="text-gray-400 leading-relaxed">
-My name is Okoli Sochimaobi Johnpaul, a frontend developer from Nigeria.
-I enjoy creating modern and responsive websites. I am currently improving
-my skills in HTML, Tailwind CSS and JavaScript while working on real projects.
-</p>
+      </div>
 
-</div>
+    </div>
+  </section>
 
-</section>
+  <!-- ABOUT -->
+  <section id="about" class="py-20 px-6" data-aos="fade-up">
 
-<!-- SKILLS -->
-<section id="skills" class="py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
 
-<div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6">About Me</h3>
 
-<h3 class="text-3xl font-bold mb-12">Skills</h3>
+      <p class="text-gray-400 leading-relaxed">
+        My name is Okoli Sochimaobi Johnpaul, a frontend developer from Nigeria.
+        I enjoy creating modern and responsive websites. I am currently improving
+        my skills in HTML, Tailwind CSS and JavaScript while working on real projects.
+      </p>
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    </div>
 
-<div class="p-6 bg-gray-900 rounded-lg hover:scale-105 transition">HTML</div>
-<div class="p-6 bg-gray-900 rounded-lg hover:scale-105 transition">Tailwind</div>
-<div class="p-6 bg-gray-900 rounded-lg hover:scale-105 transition">JavaScript</div>
-<div class="p-6 bg-gray-900 rounded-lg hover:scale-105 transition">Responsive Design</div>
+  </section>
 
-</div>
+  <!-- SKILLS -->
+  <!-- SKILLS -->
+  <section id="skills" class="py-20 px-6">
 
-</div>
+    <div class="max-w-5xl mx-auto text-center">
 
-</section>
+      <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">Skills</h3>
 
-<!-- PROJECTS -->
-<section id="projects" class="py-20 px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
 
-<div class="max-w-6xl mx-auto text-center">
+        <div class="p-6 bg-gray-900 rounded-lg hover:scale-105 transition" data-aos="zoom-in">
+          HTML
+        </div>
 
-<h3 class="text-3xl font-bold mb-12">Projects</h3>
+        <div class="p-6 bg-gray-900 rounded-lg hover:scale-105 transition" data-aos="zoom-in">
+          Tailwind CSS
+        </div>
 
-<div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-900 rounded-lg hover:scale-105 transition" data-aos="zoom-in">
+          JavaScript
+        </div>
 
-<div class="bg-gray-900 p-6 rounded-xl hover:shadow-lg transition">
-<h4 class="font-semibold text-lg mb-2">Project One</h4>
-<p class="text-gray-400 mb-4">Project description here.</p>
-<button class="text-blue-400 font-semibold">View Project</button>
-</div>
+        <div class="p-6 bg-gray-900 rounded-lg hover:scale-105 transition" data-aos="zoom-in">
+          Responsive Design
+        </div>
 
-<div class="bg-gray-900 p-6 rounded-xl hover:shadow-lg transition">
-<h4 class="font-semibold text-lg mb-2">Project Two</h4>
-<p class="text-gray-400 mb-4">Project description here.</p>
-<button class="text-blue-400 font-semibold">View Project</button>
-</div>
+        <!-- React (Learning) -->
+        <div
+          class="p-6 bg-gray-900 rounded-lg hover:scale-105 transition col-span-2 md:col-span-4 border border-blue-500"
+          data-aos="zoom-in">
 
-<div class="bg-gray-900 p-6 rounded-xl hover:shadow-lg transition">
-<h4 class="font-semibold text-lg mb-2">Project Three</h4>
-<p class="text-gray-400 mb-4">Project description here.</p>
-<button class="text-blue-400 font-semibold">View Project</button>
-</div>
+          <span class="font-semibold">React</span>
 
-</div>
+          <span class="text-sm text-blue-400 block">
+            Currently Learning
+          </span>
 
-</div>
+        </div>
 
-</section>
+      </div>
 
-<!-- CONTACT -->
-<section id="contact" class="py-20 px-6">
+    </div>
 
-<div class="max-w-4xl mx-auto text-center">
+  </section>
 
-<h3 class="text-3xl font-bold mb-6">Contact Me</h3>
+  <!-- PROJECTS -->
+  <section id="projects" class="py-20 px-6">
 
-<p class="mb-6 text-gray-400">
-If you'd like to work with me or ask questions,
-feel free to reach out on WhatsApp.
-</p>
+    <div class="max-w-6xl mx-auto text-center">
 
-<a href="https://wa.me/2347049713444"
-class="bg-green-500 px-6 py-3 rounded-lg font-semibold hover:bg-green-600">
-WhatsApp Me
-</a>
+      <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">Projects</h3>
 
-</div>
+      <div class="grid md:grid-cols-3 gap-8">
 
-</section>
+        <div class="bg-gray-900 p-6 rounded-xl transform hover:-translate-y-2 hover:shadow-2xl transition duration-300"
+          data-aos="zoom-in">
 
-<footer class="bg-black border-t border-gray-800 text-center py-6">
-© 2026 Okoli Sochimaobi Johnpaul • Nigeria
-</footer>
+          <h4 class="font-semibold text-lg mb-2">Happy-Bounty</h4>
 
-<script>
+          <p class="text-gray-400 mb-4">
+            Happy Bounty is a platform where project owners can post tasks (bounties) for developers to complete.
+            Contributors work on these tasks—such as fixing bugs, adding features, or improving documentation—and
+            receive rewards once their work is approved. The platform charges a 10% fee on the bounty amount posted,
+            helping support and maintain the service.
+          </p>
 
-const menuBtn = document.getElementById("menuBtn")
-const mobileMenu = document.getElementById("mobileMenu")
+          <button class="text-blue-400 font-semibold">
+            <a href="https://bounty-project-cn4v.vercel.app/index.html" target="_blank">View Project</a>
+          </button>
 
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden")
-})
+        </div>
 
-const links = mobileMenu.querySelectorAll("a")
+        <div class="bg-gray-900 p-6 rounded-xl transform hover:-translate-y-2 hover:shadow-2xl transition duration-300"
+          data-aos="zoom-in">
 
-links.forEach(link => {
-  link.addEventListener("click", () => {
-    mobileMenu.classList.add("hidden")
-  })
-});
+          <h4 class="font-semibold text-lg mb-2">Project Two</h4>
 
-</script>
+          <p class="text-gray-400 mb-4">
+            Project description here.
+          </p>
+
+          <button class="text-blue-400 font-semibold">
+            View Project
+          </button>
+
+        </div>
+
+        <div class="bg-gray-900 p-6 rounded-xl transform hover:-translate-y-2 hover:shadow-2xl transition duration-300"
+          data-aos="zoom-in">
+
+          <h4 class="font-semibold text-lg mb-2">Project Three</h4>
+
+          <p class="text-gray-400 mb-4">
+            Project description here.
+          </p>
+
+          <button class="text-blue-400 font-semibold">
+            View Project
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 px-6" data-aos="fade-up">
+
+    <div class="max-w-4xl mx-auto text-center">
+
+      <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
+
+      <p class="mb-6 text-gray-400">
+        If you'd like to work with me or ask questions,
+        feel free to reach out on WhatsApp.
+      </p>
+
+      <a href="https://wa.me/2347049713444" class="bg-green-500 px-6 py-3 rounded-lg font-semibold hover:bg-green-600">
+        WhatsApp Me
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black border-t border-gray-800 text-center py-6">
+    © 2026 Okoli Sochimaobi Johnpaul • Nigeria
+  </footer>
+
+  <!-- JS LIBRARIES -->
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <script>
+
+    AOS.init({
+      duration: 1000,
+      once: true
+    })
+
+    const menuBtn = document.getElementById("menuBtn")
+    const mobileMenu = document.getElementById("mobileMenu")
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden")
+    })
+
+    const links = mobileMenu.querySelectorAll("a")
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden")
+      })
+    })
+
+    new Typed("#typing", {
+      strings: [
+        "Frontend Developer",
+        "I build modern responsive websites",
+        "I love clean UI design"
+      ],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true
+    })
+
+  </script>
 
 </body>
+
 </html>
