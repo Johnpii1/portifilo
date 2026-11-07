@@ -1,11 +1,349 @@
 import { useState } from "react";
-import { ArrowUpRight, ArrowRight, Menu, X, Github, Mail, MessageCircle, Download, Code2, Layers3, Globe2, ExternalLink } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowRight,
+  ArrowUpRight,
+  Check,
+  Code2,
+  Download,
+  Github,
+  Globe2,
+  Layers3,
+  Mail,
+  Menu,
+  MessageCircle,
+  X,
+  Sparkles,
+  MonitorSmartphone,
+  Braces,
+} from "lucide-react";
 
-const projects = [{n:"01",title:"Happy Bounty",type:"WEB3 · BOUNTY PLATFORM",desc:"A multi-chain bounty platform where creators publish tasks with rewards and contributors earn by completing approved work.",tags:["React","Web3","Smart contracts"],url:"https://botchain-bounty.vercel.app/",label:"View live project"},{n:"02",title:"Open-source contributions",type:"DEVELOPMENT · COLLABORATION",desc:"Learning through practical frontend contributions, improving interfaces and collaborating on real-world projects.",tags:["Frontend","GitHub","Collaboration"],url:"https://github.com/Johnpii1",label:"Explore GitHub"}];
-const skills = ["HTML5","Tailwind CSS","JavaScript","React","Responsive Design","Git & GitHub"];
-export default function App(){const [open,setOpen]=useState(false);const close=()=>setOpen(false);return <div className="app" id="home"><header className="header wrap"><a className="brand" href="#home"><b>J<span>P</span></b> johnpaul<span className="green">.</span></a><button className="menu" onClick={()=>setOpen(!open)} aria-label="Toggle menu">{open?<X/>:<Menu/>}</button><nav className={open?"nav show":"nav"}>{["About","Projects","Skills","Contact"].map(x=><a key={x} href={"#"+x.toLowerCase()} onClick={close}>{x}</a>)}</nav><a className="talk" href="#contact">Let's talk <ArrowUpRight size={16}/></a></header>
-<main><section className="hero wrap"><div className="hero-copy"><div className="status"><i/> AVAILABLE FOR OPPORTUNITIES</div><p className="eyebrow">HELLO, I'M JOHNPAUL OKOLI</p><h1>I build thoughtful<br/><em>digital experiences.</em></h1><p className="lead">Frontend developer focused on creating clean, responsive web experiences and turning ideas into products people enjoy using.</p><div className="actions"><a className="btn primary" href="#projects">Explore my work <ArrowUpRight size={17}/></a><a className="btn secondary" href="/assest/okoli%20sochimaobi.pdf" target="_blank" rel="noreferrer"><Download size={16}/> Download CV</a></div><div className="social"><a href="https://github.com/Johnpii1" aria-label="GitHub" target="_blank" rel="noreferrer"><Github/></a><a href="https://wa.me/2347049713444" aria-label="WhatsApp" target="_blank" rel="noreferrer"><MessageCircle/></a><a href="mailto:okolichimobi08@gmail.com" aria-label="Email"><Mail/></a><span>LET'S CONNECT</span></div></div><div className="visual"><div className="orbit one"/><div className="orbit two"/><div className="grid"/><div className="floating"><Code2/> <span>Building for the web</span></div><div className="portrait"><img src="/image/IMG_20260114_202638.jpg" alt="Johnpaul Okoli"/></div><div className="location"><i/> BASED IN NIGERIA <Globe2 size={14}/></div></div><a className="scroll" href="#about">SCROLL TO EXPLORE <ArrowRight size={15}/></a></section>
-<section className="about wrap section" id="about"><div className="section-tag">01 / ABOUT ME</div><div className="about-grid"><h2>Curious by nature.<br/><em>Builder by choice.</em></h2><div><p>I'm a frontend developer from Nigeria who enjoys shaping ideas into useful digital products. I care about thoughtful interfaces, accessible experiences and code that is easy to maintain.</p><p>I'm continuously learning, experimenting with modern tools and exploring how technology can solve real problems — including in the Web3 ecosystem.</p><a className="inline-link" href="#contact">Let's work together <ArrowUpRight size={16}/></a></div></div></section>
-<section className="section wrap" id="projects"><div className="section-tag">02 / SELECTED WORK</div><div className="section-title"><h2>Things I've been building.</h2><p>A few projects and areas of work that reflect what I'm learning and creating.</p></div><div className="projects">{projects.map(p=><article className="project" key={p.n}><div className="project-meta"><span>{p.n} / PROJECT</span><ArrowUpRight/></div><div className="project-art">{p.n==="01"?<div className="bounty-art"><div><Layers3 size={40}/></div><strong>HAPPY BOUNTY</strong><small>TASKS · COMMUNITY · REWARDS</small></div>:<div className="code-art"><Code2 size={42}/><span>git commit -m "keep building"</span></div>}</div><small className="type">{p.type}</small><h3>{p.title}</h3><p>{p.desc}</p><div className="tags">{p.tags.map(t=><span key={t}>{t}</span>)}</div><a className="inline-link" href={p.url} target="_blank" rel="noreferrer">{p.label} <ExternalLink size={15}/></a></article>)}</div></section>
-<section className="section wrap" id="skills"><div className="section-tag">03 / MY TOOLKIT</div><div className="section-title"><h2>Tools I use to bring ideas to life.</h2><p>A growing toolkit, built through practice, curiosity and real projects.</p></div><div className="skill-layout"><div className="skill-intro"><Code2/><h3>Always learning.<br/><em>Always improving.</em></h3><p>I'm focused on strengthening my frontend foundations while growing my experience with React and blockchain applications.</p></div><div className="skill-list">{skills.map((s,i)=><div className="skill" key={s}><small>0{i+1}</small><strong>{s}</strong><ArrowUpRight size={16}/></div>)}</div></div></section>
-<section className="wrap contact-section" id="contact"><div className="contact-card"><div className="section-tag">04 / GET IN TOUCH</div><h2>Let's build something<br/><em>worth sharing.</em></h2><p>Have an idea, an opportunity or just want to connect? I'd be happy to hear from you.</p><div className="actions"><a className="btn primary" href="mailto:okolichimobi08@gmail.com">Send me an email <ArrowUpRight size={17}/></a><a className="btn secondary" href="https://wa.me/2347049713444" target="_blank" rel="noreferrer">Chat on WhatsApp <MessageCircle size={17}/></a></div></div></section></main><footer className="footer wrap"><a className="brand" href="#home"><b>J<span>P</span></b> johnpaul<span className="green">.</span></a><p>Designed with intention. Built with curiosity.</p><small>© {new Date().getFullYear()} Johnpaul Okoli · Nigeria</small></footer></div>}
+const projects = [
+  {
+    number: "01",
+    name: "Happy Bounty",
+    category: "WEB3 PRODUCT",
+    description:
+      "A multi-chain bounty platform where teams publish tasks with rewards and contributors earn by completing approved work.",
+    stack: ["React", "Web3", "Smart contracts"],
+    href: "https://botchain-bounty.vercel.app/",
+    action: "Explore project",
+    visual: "bounty",
+  },
+  {
+    number: "02",
+    name: "Open-source work",
+    category: "COMMUNITY & COLLABORATION",
+    description:
+      "Building experience through practical frontend contributions, improving interfaces and learning alongside developer communities.",
+    stack: ["JavaScript", "React", "GitHub"],
+    href: "https://github.com/Johnpii1",
+    action: "View GitHub profile",
+    visual: "code",
+  },
+];
+
+const capabilities = [
+  {
+    icon: MonitorSmartphone,
+    title: "Responsive interfaces",
+    text: "Layouts that feel considered and work smoothly across phones, tablets and desktops.",
+  },
+  {
+    icon: Braces,
+    title: "Frontend development",
+    text: "Clean, reusable components built with modern JavaScript and React.",
+  },
+  {
+    icon: Layers3,
+    title: "Product thinking",
+    text: "An interest in turning early ideas into useful, understandable digital experiences.",
+  },
+];
+
+const skills = [
+  "HTML5",
+  "CSS & Tailwind",
+  "JavaScript",
+  "React",
+  "Responsive Design",
+  "Git & GitHub",
+  "Web3",
+  "UI Implementation",
+];
+
+const navigation = [
+  ["About", "#about"],
+  ["Work", "#work"],
+  ["Skills", "#skills"],
+  ["Contact", "#contact"],
+];
+
+function SectionLabel({ number, children }) {
+  return (
+    <div className="section-label">
+      <span>{number}</span>
+      <i />
+      {children}
+    </div>
+  );
+}
+
+function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
+
+  return (
+    <div className="site-shell" id="top">
+      <header className="site-header container">
+        <a className="wordmark" href="#top" onClick={closeMenu} aria-label="Johnpaul home">
+          <span className="wordmark-icon">J<span>P</span></span>
+          <span>johnpaul<span className="accent">.</span></span>
+        </a>
+
+        <button
+          className="mobile-menu-button"
+          type="button"
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? <X size={21} /> : <Menu size={21} />}
+        </button>
+
+        <nav className={menuOpen ? "main-nav is-open" : "main-nav"} aria-label="Main navigation">
+          {navigation.map(([label, href]) => (
+            <a key={label} href={href} onClick={closeMenu}>{label}</a>
+          ))}
+        </nav>
+
+        <a className="header-cta" href="#contact">
+          Let's talk <ArrowUpRight size={15} />
+        </a>
+      </header>
+
+      <main>
+        <section className="hero container">
+          <div className="hero-content">
+            <div className="availability">
+              <span className="availability-dot" />
+              OPEN TO OPPORTUNITIES
+            </div>
+            <p className="eyebrow">HELLO, I'M JOHNPAUL OKOLI</p>
+            <h1>
+              Building for the web,
+              <span> with purpose.</span>
+            </h1>
+            <p className="hero-description">
+              I'm a frontend developer who enjoys turning ideas into clear,
+              responsive and useful digital experiences.
+            </p>
+
+            <div className="hero-actions">
+              <a className="button button-primary" href="#work">
+                Explore my work <ArrowUpRight size={17} />
+              </a>
+              <a
+                className="button button-quiet"
+                href="/assest/okoli%20sochimaobi.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Download size={16} /> Download CV
+              </a>
+            </div>
+
+            <div className="hero-bottom">
+              <div className="social-links" aria-label="Social links">
+                <a href="https://github.com/Johnpii1" target="_blank" rel="noreferrer" aria-label="GitHub">
+                  <Github size={17} />
+                </a>
+                <a href="https://wa.me/2347049713444" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                  <MessageCircle size={17} />
+                </a>
+                <a href="mailto:okolichimobi08@gmail.com" aria-label="Email">
+                  <Mail size={17} />
+                </a>
+              </div>
+              <span className="hero-note">GOOD IDEAS DESERVE GOOD EXECUTION.</span>
+            </div>
+          </div>
+
+          <div className="hero-art" aria-label="Portrait of Johnpaul Okoli">
+            <div className="art-grid" />
+            <div className="art-ring art-ring-one" />
+            <div className="art-ring art-ring-two" />
+            <div className="portrait-frame">
+              <img src="/image/IMG_20260114_202638.jpg" alt="Johnpaul Okoli" />
+              <div className="portrait-caption">
+                <span className="caption-dot" />
+                <span>DESIGN MINDED. CODE DRIVEN.</span>
+              </div>
+            </div>
+            <div className="floating-note note-top">
+              <Code2 size={17} />
+              <span>Building digital things</span>
+            </div>
+            <div className="floating-note note-bottom">
+              <Globe2 size={16} />
+              <span>Based in Nigeria</span>
+            </div>
+            <div className="art-index">JP / 2026</div>
+          </div>
+
+          <a className="scroll-cue" href="#about">
+            <span>SCROLL TO EXPLORE</span>
+            <ArrowDown size={14} />
+          </a>
+        </section>
+
+        <section className="section-block container" id="about">
+          <SectionLabel number="01">A LITTLE ABOUT ME</SectionLabel>
+          <div className="about-layout">
+            <h2>
+              Curious by nature.
+              <span>Builder by choice.</span>
+            </h2>
+            <div className="about-copy">
+              <p>
+                I'm a frontend developer from Nigeria who enjoys shaping ideas
+                into useful digital products. I care about thoughtful
+                interfaces, accessible experiences and code that is easy to
+                understand and maintain.
+              </p>
+              <p>
+                I'm continuously learning, experimenting with modern tools and
+                exploring how technology can solve real problems — including
+                opportunities in the Web3 ecosystem.
+              </p>
+              <a className="text-link" href="#contact">
+                A project in mind? Let's connect <ArrowUpRight size={16} />
+              </a>
+            </div>
+          </div>
+
+          <div className="capability-grid">
+            {capabilities.map(({ icon: Icon, title, text }, index) => (
+              <article className="capability-card" key={title}>
+                <div className="capability-top">
+                  <span>0{index + 1}</span>
+                  <Icon size={20} />
+                </div>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section-block container" id="work">
+          <SectionLabel number="02">SELECTED WORK</SectionLabel>
+          <div className="section-heading-row">
+            <h2>Some things I've been <span>working on.</span></h2>
+            <p>A selection of projects and practical work from my development journey.</p>
+          </div>
+
+          <div className="project-grid">
+            {projects.map((project) => (
+              <article className="project-card" key={project.number}>
+                <div className="project-card-top">
+                  <span>{project.number} / FEATURED</span>
+                  <ArrowUpRight size={18} />
+                </div>
+                <div className={`project-visual ${project.visual}`}>
+                  {project.visual === "bounty" ? (
+                    <div className="bounty-visual-content">
+                      <div className="bounty-symbol"><Layers3 size={36} /></div>
+                      <strong>HAPPY BOUNTY</strong>
+                      <span>TASKS · COMMUNITY · REWARDS</span>
+                    </div>
+                  ) : (
+                    <div className="code-visual-content">
+                      <div className="code-window">
+                        <div className="window-dots"><i /><i /><i /></div>
+                        <code><span>const</span> keepBuilding = <b>true</b>;</code>
+                        <code><span>while</span> (keepBuilding) {"{"}</code>
+                        <code className="code-indent">learn(); create(); improve();</code>
+                        <code>{"}"}</code>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <p className="project-category">{project.category}</p>
+                <h3>{project.name}</h3>
+                <p className="project-description">{project.description}</p>
+                <div className="tag-list">
+                  {project.stack.map((item) => <span key={item}>{item}</span>)}
+                </div>
+                <a className="text-link" href={project.href} target="_blank" rel="noreferrer">
+                  {project.action} <ArrowUpRight size={15} />
+                </a>
+              </article>
+            ))}
+          </div>
+          <a className="github-more" href="https://github.com/Johnpii1" target="_blank" rel="noreferrer">
+            More on GitHub <ArrowRight size={16} />
+          </a>
+        </section>
+
+        <section className="section-block container" id="skills">
+          <SectionLabel number="03">TOOLS & TECHNOLOGIES</SectionLabel>
+          <div className="skills-layout">
+            <div className="skills-intro">
+              <div className="skills-icon"><Braces size={24} /></div>
+              <h2>My toolkit is <span>always growing.</span></h2>
+              <p>
+                I keep learning by building, testing ideas and working with
+                tools that help create better experiences for the web.
+              </p>
+              <div className="learning-note"><Sparkles size={15} /> Learning is part of the process.</div>
+            </div>
+            <div className="skills-list">
+              {skills.map((skill, index) => (
+                <div className="skill-row" key={skill}>
+                  <span className="skill-number">0{index + 1}</span>
+                  <strong>{skill}</strong>
+                  <Check size={15} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="contact-section container" id="contact">
+          <div className="contact-panel">
+            <div className="contact-orb" />
+            <SectionLabel number="04">HAVE A PROJECT IN MIND?</SectionLabel>
+            <h2>Let's make something <span>meaningful.</span></h2>
+            <p>
+              Have an idea, an opportunity or just want to connect? I'd be glad
+              to hear from you.
+            </p>
+            <div className="contact-actions">
+              <a className="button button-primary" href="mailto:okolichimobi08@gmail.com">
+                Send me an email <ArrowUpRight size={17} />
+              </a>
+              <a className="button button-quiet" href="https://wa.me/2347049713444" target="_blank" rel="noreferrer">
+                Chat on WhatsApp <MessageCircle size={17} />
+              </a>
+            </div>
+            <a className="contact-email" href="mailto:okolichimobi08@gmail.com">
+              okolichimobi08@gmail.com
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer className="site-footer container">
+        <a className="wordmark" href="#top">
+          <span className="wordmark-icon">J<span>P</span></span>
+          <span>johnpaul<span className="accent">.</span></span>
+        </a>
+        <p>Designed with intention. Built with curiosity.</p>
+        <span className="copyright">© {new Date().getFullYear()} Johnpaul Okoli · Nigeria</span>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
