@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio-specific visual effects and responsive components.
+   Layout and utility styling can now use Tailwind classes in JSX. */
