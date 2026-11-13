@@ -1,12 +1,13 @@
 # Johnpaul Portfolio
 
-A responsive personal developer portfolio built with React and Vite.
+A responsive personal developer portfolio built with React, Vite and Tailwind CSS.
 
 ## Tech stack
 - React 18
 - Vite
+- Tailwind CSS 3
+- PostCSS and Autoprefixer
 - Lucide React icons
-- Custom responsive CSS
 - Google Fonts: DM Sans and Space Grotesk
 
 ## Run locally
@@ -20,6 +21,14 @@ npm run dev
 npm run build
 npm run preview
 ```
+
+## Tailwind setup
+- Tailwind configuration: `tailwind.config.js`
+- PostCSS configuration: `postcss.config.js`
+- Tailwind directives: `src/index.css`
+- Portfolio-specific visual effects, animations and responsive component rules: `src/style.css`
+
+You can use Tailwind utility classes directly in JSX. Existing custom styles remain for the portfolio's distinctive visual treatment and animation details.
 
 ## Project structure
 ```
@@ -40,6 +49,7 @@ src/
 │   ├── BeyondCodeSection.jsx
 │   └── ContactSection.jsx
 ├── App.jsx
+├── index.css
 ├── main.jsx
 └── style.css
 assest/
@@ -48,6 +58,8 @@ image/
 └── IMG_20260114_202638.jpg
 index.html
 package.json
+postcss.config.js
+tailwind.config.js
 vite.config.js
 ```
 
@@ -56,8 +68,10 @@ vite.config.js
 - **Individual page sections:** `src/sections/`
 - **Header, footer and shared section label:** `src/components/`
 - **Page composition and scroll reveal behavior:** `src/App.jsx`
-- **All visual styling and responsive breakpoints:** `src/style.css`
+- **Tailwind utilities and base styles:** `src/index.css` and JSX class names
+- **Portfolio-specific styling, animations and responsive details:** `src/style.css`
+- **Tailwind theme and content scanning:** `tailwind.config.js`
 - **Profile photo:** replace the image in `image/` while keeping its filename, or update the image path in `src/sections/HeroSection.jsx`.
 - **CV:** replace the PDF in `assest/` while keeping its filename, or update the link in `src/sections/HeroSection.jsx`.
 
-The refactor is intended to preserve the existing design and behavior while making each area easier to edit independently.
+The Tailwind setup is added without intentionally changing the portfolio's existing design or interactions.
