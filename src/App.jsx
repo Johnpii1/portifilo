@@ -36,11 +36,11 @@ function App() {
   }, []);
 
   return (
-    <div className="site-shell" id="top">
+    <div className="site-shell min-h-screen w-full" id="top">
       <SiteHeader />
-      <main>
+      <main className="w-full">
         <HeroSection />
-        <div className="marquee-strip" aria-label="Areas of interest">
+        <div className="marquee-strip w-full overflow-hidden" aria-label="Areas of interest">
           <div className="marquee-track">
             {Array.from({ length: 2 }).map((_, index) => (
               <div className="marquee-group" key={index}>
@@ -60,7 +60,7 @@ function App() {
         <ContactSection />
       </main>
       <SiteFooter />
-      {showTop && <a className="back-to-top cursor-pointer" href="#top" aria-label="Back to top"><ChevronUp size={19}/></a>}
+      {showTop && <a className="back-to-top cursor-pointer transition duration-200 hover:-translate-y-1" href="#top" aria-label="Back to top"><ChevronUp size={19}/></a>}
     </div>
   );
 }
