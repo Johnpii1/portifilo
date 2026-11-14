@@ -79,8 +79,28 @@ export const projects = [
   status: "TESTNET",
   button: "View Project",
 },
+{
+  number: "04",
+  name: "MiniLend",
+  category: "WEB3 · DEFI · FINTECH",
+  description:
+    "A decentralized on-chain lending and borrowing platform that allows users to supply assets, earn through liquidity provision, borrow against collateral, and manage their positions transparently through smart contracts.",
+  stack: [
+    "React",
+    "JavaScript",
+    "Solidity",
+    "Smart Contracts",
+    "Ethereum",
+    "Web3"
+  ],
+  href: "https://mini-lend-v2.vercel.app/",
+  action: "Explore live project",
+  visual: "minilend",
+  status: "TESTNET",
+  button: "View Project",
+},
   {
-    number: "04",
+    number: "05",
     name: "Open-source contributions",
     category: "COMMUNITY · DEVELOPMENT",
     description:
