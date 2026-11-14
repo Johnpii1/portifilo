@@ -7,7 +7,8 @@ export default function SiteHeader() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className="site-header container">
+    <section className="flex justify-center items-center p-10">
+    <header className="site-header container flex justify-around items-center  fixed w-full cursor-pointer rounded-3xl border bg-black/100 z-10 p-4">
       <a className="wordmark cursor-pointer" href="#top" onClick={closeMenu} aria-label="Johnpaul home">
         <span className="wordmark-icon">J<span>P</span></span><span>johnpaul<span className="accent">.</span></span>
       </a>
@@ -19,5 +20,6 @@ export default function SiteHeader() {
       </nav>
       <a className="header-cta cursor-pointer" href="#contact">Let's talk <ArrowUpRight size={15}/></a>
     </header>
+    </section>
   );
 }
