@@ -1,6 +1,6 @@
 import { ArrowDown, ArrowUpRight, Code2, Download, Github, Mail, MapPin, MessageCircle, Linkedin } from "lucide-react";
 import { contact } from "../data/portfolioData";
-
+import Dp  from "../../image/dp.jpeg"
 export default function HeroSection() {
   return (
     <section className="hero container" id="home">
@@ -26,7 +26,7 @@ export default function HeroSection() {
       <div className="hero-art reveal" aria-label="Portrait of Johnpaul Okoli">
         <div className="art-grid"/><div className="art-ring art-ring-one"/><div className="art-ring art-ring-two"/>
         <div className="portrait-frame">
-          <img src="/image/IMG_20260114_202638.jpg" alt="Portrait of Johnpaul Okoli"/>
+          <img src={Dp} alt="Portrait of Johnpaul Okoli"/>
           <div className="portrait-caption"><span className="caption-dot"/><span>DESIGN MINDED. CODE DRIVEN.</span></div>
         </div>
         <div className="floating-note note-top"><Code2 size={17}/><span>Building digital things</span></div>
