@@ -81,7 +81,7 @@ export const projects = [
 },
 {
   number: "04",
-  name: "MiniLend",
+  name: "certicraft-frontend.onrender",
   category: "WEB3 · DEFI · FINTECH",
   description:
     "A decentralized on-chain lending and borrowing platform that allows users to supply assets, earn through liquidity provision, borrow against collateral, and manage their positions transparently through smart contracts.",

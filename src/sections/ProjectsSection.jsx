@@ -1,9 +1,9 @@
-
 import { ArrowRight, ExternalLink, Sparkles } from "lucide-react";
 import happybounty from "../../image/happy-bounty.png";
 import payperuseai from "../../image/ai.png";
-import minilend from "../../image/minilend.png"
+import minilend from "../../image/minilend.png";
 import SectionLabel from "../components/SectionLabel";
+import certifcate from "../../image/certficate.png"
 import { projects } from "../data/portfolioData";
 
 function ProjectVisual({ visual }) {
@@ -25,6 +25,14 @@ function ProjectVisual({ visual }) {
     );
   }
 
+if (visual === "AI" || visual === "pay-per-use-ai") {
+    return (
+      <div className="pay-per-use-ai-visual-content">
+        <img src={certifcate} alt="Pay-Per-Use AI" />
+      </div>
+    );
+  }
+  
   if (visual === "code") {
     return (
       <div className="code-visual-content">
@@ -34,8 +42,12 @@ function ProjectVisual({ visual }) {
             <i />
             <i />
           </div>
-          <code><span>const</span> keepBuilding = <b>true</b>;</code>
-          <code><span>while</span> (keepBuilding) {"{"}</code>
+          <code>
+            <span>const</span> keepBuilding = <b>true</b>;
+          </code>
+          <code>
+            <span>while</span> (keepBuilding) {"{"}
+          </code>
           <code className="code-indent">learn(); create(); improve();</code>
           <code>{"}"}</code>
         </div>
@@ -45,9 +57,10 @@ function ProjectVisual({ visual }) {
 
   return (
     <div className="next-visual-content">
-     <img src={minilend} alt="minilend" className="w-fit" />
+      <img src={minilend} alt="minilend" className="w-fit" />
     </div>
   );
+
 }
 
 export default function ProjectsSection() {
@@ -82,9 +95,7 @@ export default function ProjectsSection() {
 
             <h3>{project.name}</h3>
 
-            <p className="project-description">
-              {project.description}
-            </p>
+            <p className="project-description">{project.description}</p>
 
             <div className="tag-list">
               {project.stack.map((item) => (
