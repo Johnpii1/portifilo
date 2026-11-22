@@ -1,9 +1,11 @@
-import { ArrowRight, ExternalLink, Sparkles } from "lucide-react";
+
+import { ArrowRight, ExternalLink } from "lucide-react";
 import happybounty from "../../image/happy-bounty.png";
 import payperuseai from "../../image/ai.png";
 import minilend from "../../image/minilend.png";
+import certifcate from "../../image/certficate.png";
+import xogrid from "../../image/xogrid.png";
 import SectionLabel from "../components/SectionLabel";
-import certifcate from "../../image/certficate.png"
 import { projects } from "../data/portfolioData";
 
 function ProjectVisual({ visual }) {
@@ -25,14 +27,22 @@ function ProjectVisual({ visual }) {
     );
   }
 
-if (visual === "AI" || visual === "pay-per-use-ai") {
+  if (visual === "certificate" || visual === "certifcate") {
     return (
-      <div className="pay-per-use-ai-visual-content">
-        <img src={certifcate} alt="Pay-Per-Use AI" />
+      <div className="certificate-visual-content">
+        <img src={certifcate} alt="Certificate" />
       </div>
     );
   }
-  
+
+  if (visual === "xogrid") {
+    return (
+      <div className="xogrid-visual-content">
+        <img src={xogrid} alt="XOGrid" />
+      </div>
+    );
+  }
+
   if (visual === "code") {
     return (
       <div className="code-visual-content">
@@ -48,7 +58,9 @@ if (visual === "AI" || visual === "pay-per-use-ai") {
           <code>
             <span>while</span> (keepBuilding) {"{"}
           </code>
-          <code className="code-indent">learn(); create(); improve();</code>
+          <code className="code-indent">
+            learn(); create(); improve();
+          </code>
           <code>{"}"}</code>
         </div>
       </div>
@@ -57,10 +69,9 @@ if (visual === "AI" || visual === "pay-per-use-ai") {
 
   return (
     <div className="next-visual-content">
-      <img src={minilend} alt="minilend" className="w-fit" />
+      <img src={minilend} alt="MiniLend" className="w-fit" />
     </div>
   );
-
 }
 
 export default function ProjectsSection() {
