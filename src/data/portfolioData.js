@@ -8,11 +8,9 @@ import {
   Github,
   Globe2,
   Workflow,
-  Monitor,
   Rocket,
   Cpu,
   Lightbulb,
-  View,
 } from "lucide-react";
 
 export const navigation = [
@@ -59,48 +57,66 @@ export const projects = [
     status: "LIVE",
     button: "View Project",
   },
-{
-  number: "03",
-  name: "MiniLend",
-  category: "WEB3 · DEFI · FINTECH",
-  description:
-    "A decentralized on-chain lending and borrowing platform that allows users to supply assets, earn through liquidity provision, borrow against collateral, and manage their positions transparently through smart contracts.",
-  stack: [
-    "React",
-    "JavaScript",
-    "Solidity",
-    "Smart Contracts",
-    "Ethereum",
-    "Web3"
-  ],
-  href: "https://mini-lend-v2.vercel.app/",
-  action: "Explore live project",
-  visual: "minilend",
-  status: "TESTNET",
-  button: "View Project",
-},
-{
-  number: "04",
-  name: "certicraft-frontend.onrender",
-  category: "WEB3 · DEFI · FINTECH",
-  description:
-    "A decentralized on-chain lending and borrowing platform that allows users to supply assets, earn through liquidity provision, borrow against collateral, and manage their positions transparently through smart contracts.",
-  stack: [
-    "React",
-    "JavaScript",
-    "Solidity",
-    "Smart Contracts",
-    "Ethereum",
-    "Web3"
-  ],
-  href: "https://mini-lend-v2.vercel.app/",
-  action: "Explore live project",
-  visual: "minilend",
-  status: "TESTNET",
-  button: "View Project",
-},
+  {
+    number: "03",
+    name: "MiniLend",
+    category: "WEB3 · DEFI · FINTECH",
+    description:
+      "A decentralized on-chain lending and borrowing platform that allows users to supply assets, earn through liquidity provision, borrow against collateral, and manage their positions transparently through smart contracts.",
+    stack: [
+      "React",
+      "JavaScript",
+      "Solidity",
+      "Smart Contracts",
+      "Ethereum",
+      "Web3",
+    ],
+    href: "https://mini-lend-v2.vercel.app/",
+    action: "Explore live project",
+    visual: "minilend",
+    status: "TESTNET",
+    button: "View Project",
+  },
+  {
+    number: "04",
+    name: "CertiCraft",
+    category: "BLOCKCHAIN · CERTIFICATE VERIFICATION",
+    description:
+      "A certificate platform focused on creating and verifying digital credentials, making it easier to validate achievements and build trust in issued certificates.",
+    stack: [
+      "React",
+      "JavaScript",
+      "Web3",
+      "Frontend Development",
+    ],
+    href: "https://certicraft-frontend.onrender.com/",
+    action: "Explore live project",
+    visual: "certificate",
+    status: "LIVE",
+    button: "View Project",
+  },
   {
     number: "05",
+    name: "XOGrid",
+    category: "BLOCKCHAIN · WEB3 DEVELOPMENT",
+    description:
+      "Building a modern blockchain platform with a focus on responsive UI, intuitive user experiences, and smart contract template discovery and verification.",
+    stack: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Lucide React",
+      "Git",
+      "GitHub",
+    ],
+    href: "https://xogrid.vercel.app/",
+    action: "Explore live project",
+    visual: "xogrid",
+    status: "LIVE",
+    button: "View Project",
+  },
+  {
+    number: "06",
     name: "Open-source contributions",
     category: "COMMUNITY · DEVELOPMENT",
     description:
@@ -112,7 +128,6 @@ export const projects = [
     status: "ONGOING",
     button: "View Contributions",
   },
-
 ];
 
 export const skills = [
